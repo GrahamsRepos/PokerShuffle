@@ -1,12 +1,21 @@
-import {fullDeck} from "../suites"
-import {getColoredText,shuffleArray} from "../shuffler/functions"
+import { fullDeck } from '../suites';
+import {
+  getColoredText,
+  shuffleArray,
+  printDeck,
+  drawCards,
+  printDraw,
+  evaluateDraw,
+} from '../shuffler/functions';
 
-const cardSuitesString = shuffleArray(fullDeck).reduce((c,card,i)=>{
-    if((i+1)%13===0 && i!==0) {
-        return c + getColoredText(`|${card.symbol} ${card.kind}|\n`, card.suiteColor)
-    }else{
-        return c + getColoredText(`|${card.symbol} ${card.kind}|`, card.suiteColor)
-    }
-},'')
-
-console.log(cardSuitesString);
+console.log('---Lets Play---\n');
+printDeck([...fullDeck]);
+console.log('---Shuffling Cards---\n');
+const shuffledDeck = shuffleArray(fullDeck);
+printDeck(shuffledDeck);
+console.log('---Drawing Cards---\n');
+const draw = drawCards(shuffledDeck);
+printDraw(draw);
+console.log('\n---Draw Evaluation---\n');
+evaluateDraw(draw);
+console.log('\n');
