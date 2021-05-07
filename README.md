@@ -6,6 +6,7 @@ This is an app to simulate a poker hand draw and evaluation
 
 ## Requirements
 * This application has been tested on Ubuntu 20.04 LTS with NodeJS 12.18.3 installed
+* Note: For propper effect this application needs to be run on a real shell (not visual studio or webstorm built in shell)
 
 ## How do I get it set up?
 * Install NodeJS 12.18.3 (Older versions will probably also work)
