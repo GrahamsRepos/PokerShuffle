@@ -29,7 +29,7 @@ export class Dealer {
     printDraw(deck);
   }
   private static evaluateDraw(draw: card[]) {
-    evaluateDraw(draw);
+    return evaluateDraw(draw);
   }
   public play() {
     const initialDeck = [...this.initialDeck];
@@ -53,7 +53,6 @@ export class Dealer {
           const draw = Dealer.drawCards(newDeck);
           Dealer.printDraw(draw);
           console.log('\n---Draw Evaluation---\n');
-          console.log(draw);
           console.log(Dealer.evaluateDraw(draw));
           console.log('\n');
         }
